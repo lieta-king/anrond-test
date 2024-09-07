@@ -25,6 +25,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y wget tar
+        mkdir -p $HOME/sdk/cmdline-tools   # 创建解压目录
         wget https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip
         unzip commandlinetools-linux-7583922_latest.zip -d $HOME/sdk/cmdline-tools
         mkdir -p $HOME/sdk/cmdline-tools/latest
