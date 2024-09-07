@@ -26,9 +26,9 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y wget tar
         wget https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip
-        unzip commandlinetools-linux-7583922_latest.zip -d $HOME/sdk
+        unzip commandlinetools-linux-7583922_latest.zip -d $HOME/sdk/cmdline-tools
         mkdir -p $HOME/sdk/cmdline-tools/latest
-        mv $HOME/sdk/cmdline-tools/* $HOME/sdk/cmdline-tools/latest
+        mv $HOME/sdk/cmdline-tools/cmdline-tools/* $HOME/sdk/cmdline-tools/latest
         yes | $HOME/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
         $HOME/sdk/cmdline-tools/latest/bin/sdkmanager "platforms;android-19" "build-tools;19.1.0"
 
