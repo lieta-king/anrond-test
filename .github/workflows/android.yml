@@ -37,7 +37,8 @@ jobs:
       run: gradle wrapper  # 自动生成 gradlew
 
     - name: Build APK
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleDebug --warning-mode none
+
 
     - name: Upload APK
       uses: actions/upload-artifact@v2
