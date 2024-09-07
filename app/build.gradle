@@ -1,23 +1,16 @@
-apply plugin: 'com.android.application'
-
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30  // 或更高版本
     defaultConfig {
-        applicationId "com.example.myapp"
-        minSdkVersion 14
-        targetSdkVersion 29
+        applicationId "com.example.anrondtest"
+        minSdkVersion 23  // 更新为 Android 6.0 及以上
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-}
-
-dependencies {
-    implementation 'com.android.support:appcompat-v7:19.1.0'
 }
